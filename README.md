@@ -1,6 +1,6 @@
 # Word CLI
 
-Word command line interface to get useful information from a chunk of text.
+Command line interface to get useful information from a chunk of text.
 
 ## Install
 
