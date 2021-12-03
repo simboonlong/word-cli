@@ -1,9 +1,23 @@
 # Word CLI
 
-Word command line interface to get useful information from a chunk of text.
+Command line interface to get useful information from a chunk of text.
 
-### Count
+## Install
+
+`npm i -g @simboonlong/word-cli`
+
+## Count
+
+Count total words.
 
 ```
-npm run dev -- count --text "foobar in hello world!" --char
+word count --text 'foobar in hello world!'
 ```
+
+Count total characters.
+
+```
+word count --text 'foobar in hello world!' --char
+```
+
+<!-- npm run dev -- count --text 'foobar in hello world!' --char -->
