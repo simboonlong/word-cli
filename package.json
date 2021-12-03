@@ -6,6 +6,9 @@
   "bugs": {
     "url": "https://github.com/simboonlong/word-cli/issues"
   },
+  "bin": {
+    "word": "dist/cjs/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simboonlong/word-cli.git"

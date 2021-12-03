@@ -4,7 +4,9 @@ Command line interface to get useful information from a chunk of text.
 
 ## Install
 
-`npm i -g @simboonlong/word-cli`
+```
+npm i -g @simboonlong/word-cli
+```
 
 ## Count
 
