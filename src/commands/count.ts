@@ -1,10 +1,6 @@
 import { Argv } from "yargs";
 import signale from "signale";
-
-interface Count {
-  text: string;
-  char?: boolean;
-}
+import { Count, getCount } from "../implementations/count";
 
 export const command = "count [text]";
 export const description = "Count the number of words or characters in text";
@@ -14,7 +10,7 @@ export const builder = (yargs: Argv) => {
     .option("text", {
       alias: "t",
       demandOption: true,
-      describe: "Input for text",
+      describe: "Text input",
       type: "string",
     })
     .option("char", {
@@ -26,18 +22,10 @@ export const builder = (yargs: Argv) => {
 };
 
 export const handler = (args: Count) => {
-  const { text, char } = args;
-  let count;
-
-  if (char) {
-    const textWithoutSpace = text.replace(/ /g, "");
-    count = textWithoutSpace.length;
-  } else {
-    count = text.split(" ").filter((item) => {
-      return item !== "";
-    }).length;
+  try {
+    const count = getCount(args);
+    signale.success(`${count}`);
+  } catch (e) {
+    signale.error(e);
   }
-
-  signale.success(`${count}`);
-  return count;
 };
