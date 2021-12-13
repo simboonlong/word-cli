@@ -26,6 +26,8 @@ Count total words.
 word count 'foobar in hello world!'
 ```
 
+<!-- npm run dev -- count 'foobar in hello world!' -->
+
 Count total characters.
 
 ```
@@ -33,3 +35,21 @@ word count 'foobar in hello world!' --char
 ```
 
 <!-- npm run dev -- count 'foobar in hello world!' --char -->
+
+## Occur
+
+Count total occurrences of word in text.
+
+```
+word occur 'foobar in hello world!' --str foobar
+```
+
+<!-- npm run dev -- occur 'foobar in hello world!' --str foobar -->
+
+Count total occurrences of character in text.
+
+```
+word occur 'foobar in hello world!' --str o --char
+```
+
+<!-- npm run dev -- occur 'foobar in hello world!' --str o --char -->
