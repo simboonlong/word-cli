@@ -1,20 +1,20 @@
 import { getWords } from "../utils";
 
 export interface Occur {
-  text: string;
+  input: string;
   string: string;
-  char?: boolean;
+  character?: boolean;
 }
 
 export const occur = (args: Occur) => {
-  const { text, string, char } = args;
+  const { input, string, character } = args;
   const regex = new RegExp(string, "g");
   let count = 0;
 
-  if (char) {
-    count = (text.match(regex) || []).length;
+  if (character) {
+    count = (input.match(regex) || []).length;
   } else {
-    count = getWords(text).filter((word) => word === string).length;
+    count = getWords(input).filter((word) => word === string).length;
   }
 
   return count;

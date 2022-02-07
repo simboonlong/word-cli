@@ -1,19 +1,19 @@
 import { getWords } from "../utils";
 
 export interface Count {
-  text: string;
-  char?: boolean;
+  input: string;
+  character?: boolean;
 }
 
 export const getCount = (args: Count) => {
-  const { text, char } = args;
+  const { input, character } = args;
   let count;
 
-  if (char) {
-    const textWithoutSpace = text.replace(/ /g, "");
+  if (character) {
+    const textWithoutSpace = input.replace(/ /g, "");
     count = textWithoutSpace.length;
   } else {
-    count = getWords(text).length;
+    count = getWords(input).length;
   }
 
   return count;
