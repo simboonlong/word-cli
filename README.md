@@ -16,6 +16,8 @@ or
 npx -p @simboonlong/word-cli word <command> <arguments>
 ```
 
+## Demo
+
 Example:
 
 ```
