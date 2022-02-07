@@ -26,7 +26,9 @@ npx -p @simboonlong/word-cli word count 'foobar in hello world!'
 
 The above word count should return 4.
 
-## Count
+---
+
+### Count
 
 Count total words.
 
@@ -44,7 +46,7 @@ word count 'foobar in hello world!' --character
 
 <!-- npm run dev -- count 'foobar in hello world!' -c -->
 
-## Occur
+### Occur
 
 Count total occurrences of word in text.
 
