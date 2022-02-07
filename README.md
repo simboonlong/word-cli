@@ -16,7 +16,15 @@ or
 npx -p @simboonlong/word-cli word <command> <arguments>
 ```
 
-<!-- npx -p @simboonlong/word-cli word count 'foobar in hello world!' -->
+## Demo
+
+Example:
+
+```
+npx -p @simboonlong/word-cli word count 'foobar in hello world!'
+```
+
+The above word count should return 4.
 
 ## Count
 
@@ -31,25 +39,25 @@ word count 'foobar in hello world!'
 Count total characters.
 
 ```
-word count 'foobar in hello world!' --char
+word count 'foobar in hello world!' --character
 ```
 
-<!-- npm run dev -- count 'foobar in hello world!' --char -->
+<!-- npm run dev -- count 'foobar in hello world!' -c -->
 
 ## Occur
 
 Count total occurrences of word in text.
 
 ```
-word occur 'foobar in hello world!' --str foobar
+word occur 'foobar in hello world!' --string foobar
 ```
 
-<!-- npm run dev -- occur 'foobar in hello world!' --str foobar -->
+<!-- npm run dev -- occur 'foobar in hello world!' -s foobar -->
 
 Count total occurrences of character in text.
 
 ```
-word occur 'foobar in hello world!' --str o --char
+word occur 'foobar in hello world!' --string l --character
 ```
 
-<!-- npm run dev -- occur 'foobar in hello world!' --str o --char -->
+<!-- npm run dev -- occur 'foobar in hello world!' -s l -c -->

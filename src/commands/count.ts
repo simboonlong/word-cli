@@ -2,21 +2,22 @@ import { Argv } from "yargs";
 import signale from "signale";
 import { Count, getCount } from "../implementations/count";
 
-export const command = "count [text]";
-export const description = "Count the number of words or characters in text";
+export const command = "count [input]";
+export const description =
+  "Count the number of words or characters within input text";
 
 export const builder = (yargs: Argv) => {
   yargs
-    .option("text", {
-      alias: "t",
+    .option("input", {
+      alias: "i",
       demandOption: true,
-      describe: "Text input",
+      describe: "Input text",
       type: "string",
     })
-    .option("char", {
+    .option("character", {
       alias: "c",
       default: false,
-      describe: "Count characters",
+      describe: "Count by character",
       type: "boolean",
     });
 };
